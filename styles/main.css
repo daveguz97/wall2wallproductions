@@ -208,6 +208,10 @@ ul {
   }
 }
 
+#main-header h1 {
+  font-size: 3.3rem;
+}
+
 #main-header nav .nav-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -225,6 +229,10 @@ ul {
 #main-header nav .toggle #line-3 {
   -webkit-transform: rotate(45deg) translate(-5px, -6px);
           transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#main-header .lead {
+  font-size: 1rem;
 }
 
 @media screen and (max-height: 400px) {

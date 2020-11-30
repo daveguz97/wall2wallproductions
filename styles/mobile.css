@@ -1,0 +1,102 @@
+@media screen and (max-width: 1024px) {
+  #main-header nav .nav-links {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    position: relative;
+    overflow-x: hidden;
+  }
+  #main-header .burger {
+    display: block;
+  }
+  #main-header nav .nav-links {
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    top: 0vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: rgba(25, 25, 25, 0.8);
+    width: 100%;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.3s ease-in;
+    transition: -webkit-transform 0.3s ease-in;
+    transition: transform 0.3s ease-in;
+    transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  }
+  #main-header nav .nav-links li {
+    opacity: 0;
+  }
+}
+
+#main-header h1 {
+  font-size: 3.3rem;
+}
+
+#main-header nav .nav-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+#main-header nav .toggle #line-1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#main-header nav .toggle #line-2 {
+  opacity: 0;
+}
+
+#main-header nav .toggle #line-3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#main-header .lead {
+  font-size: 1rem;
+}
+
+@media screen and (max-height: 400px) {
+  #main-header {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=mobile.css.map */
