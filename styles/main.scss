@@ -99,7 +99,7 @@ ul {
             margin-left: 1rem;
         }
 
-        #nav-links {
+        .nav-links {
             display: flex;
             width: 60%;
             align-items: center;
@@ -142,7 +142,7 @@ ul {
 @media screen and (max-width: 1024px) {
     #main-header {
         nav {
-            #nav-links {
+            .nav-links {
                 width: 60%;
             }
         }
@@ -160,7 +160,7 @@ ul {
             display: block;
         }
         nav {
-            #nav-links {
+            .nav-links {
                 position: absolute;
                 right: 0;
                 height: 92vh;
@@ -171,10 +171,17 @@ ul {
                 background-color: rgba(25, 25, 25, 0.8);
                 width: 100%;
                 transform: translateX(100%);
+                transition: transform 0.3s ease-in;
             }
-            #nav-links li {
+            .nav-links li {
                 opacity: 0;
             }
         }
+    }
+}
+
+nav {
+    .nav-active {
+        transform: translateX(0);
     }
 }
