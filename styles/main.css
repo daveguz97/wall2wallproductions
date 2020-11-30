@@ -112,6 +112,7 @@ ul {
 #main-header nav #logo {
   letter-spacing: 5px;
   margin-left: 1rem;
+  z-index: 1;
 }
 
 #main-header nav .nav-links {
@@ -136,7 +137,7 @@ ul {
 #main-header nav .nav-links .nav-item .nav-link {
   font-weight: 600;
   color: #dddddd;
-  font-weight: 200;
+  z-index: 1;
 }
 
 #main-header nav .nav-links .nav-item .nav-link:hover {
@@ -146,6 +147,7 @@ ul {
 #main-header .burger {
   display: none;
   cursor: pointer;
+  z-index: 1;
 }
 
 #main-header .burger div {
@@ -153,6 +155,10 @@ ul {
   height: 2px;
   background: #dddddd;
   margin: 5px;
+  -webkit-transition: -webkit-transform 0.3s ease-in;
+  transition: -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
 #main-header .lead {
@@ -176,8 +182,8 @@ ul {
   #main-header nav .nav-links {
     position: absolute;
     right: 0;
-    height: 92vh;
-    top: 8vh;
+    height: 100vh;
+    top: 0vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -202,8 +208,54 @@ ul {
   }
 }
 
-nav .nav-active {
+#main-header nav .nav-active {
   -webkit-transform: translateX(0);
           transform: translateX(0);
+}
+
+#main-header nav .toggle #line-1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#main-header nav .toggle #line-2 {
+  opacity: 0;
+}
+
+#main-header nav .toggle #line-3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+@media screen and (max-height: 400px) {
+  #main-header {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 /*# sourceMappingURL=main.css.map */
