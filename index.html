@@ -3,6 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            src="https://kit.fontawesome.com/f716609ce8.js"
+            crossorigin="anonymous"
+        ></script>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
             href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap"
@@ -14,7 +18,7 @@
     <body>
         <main>
             <!-- Header -->
-            <header id="main-header">
+            <header id="landing">
                 <nav>
                     <h5 id="logo">Wall2Wall Productions</h5>
                     <ul class="nav-links">
@@ -38,11 +42,60 @@
                     </div>
                 </nav>
                 <div class="container">
-                    <h2 id="title">Wall2Wall Productions</h2>
-                    <p class="lead">Videographer and Photographer</p>
+                    <div class="wrapper">
+                        <h2 id="title">Wall2Wall Productions</h2>
+                        <p class="lead">Videographer and Photographer</p>
+                    </div>
                 </div>
             </header>
+
+            <!-- About Section -->
+            <section id="about">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="left-side">
+                            <h2>About Me</h2>
+                            <p>
+                                I'm a videographer and photographer that's
+                                resides in Charlotte, Nc.
+                            </p>
+                            <p>You can follow me on Youtube or Instagram!</p>
+                            <a
+                                href="https://www.instagram.com/wall2wall_productions/"
+                                target="_blank"
+                                ><i class="fab fa-instagram fa-3x"></i
+                            ></a>
+                            <a
+                                href="https://www.youtube.com/channel/UCVR61IfaupKs7ZqsvTjQIJQ"
+                                target="_blank"
+                            >
+                                <i class="fab fa-youtube fa-3x"></i
+                            ></a>
+                        </div>
+                        <div class="right-side">
+                            <img src="./images/logo.png" alt="logo-img" />
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
+        <div class="intro">
+            <div class="intro-text">
+                <h1 class="hide">
+                    <span class="text">Charlotte's</span>
+                </h1>
+                <h1 class="hide">
+                    <span class="text">Photographer And </span>
+                </h1>
+                <h1 class="hide"><span class="text">Videographer</span></h1>
+            </div>
+            <div class="slider"></div>
+        </div>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+            crossorigin="anonymous"
+        ></script>
         <script src="./js/main.js"></script>
     </body>
 </html>

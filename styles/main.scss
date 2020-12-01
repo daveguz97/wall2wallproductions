@@ -1,5 +1,5 @@
 $light-color: rgb(221, 221, 221);
-$dark-color: #333;
+$dark-color: #232323;
 
 // Reset
 * {
@@ -19,6 +19,7 @@ body {
     line-height: 1.3;
     background: $light-color;
     color: $dark-color;
+    position: relative;
 }
 
 h1 {
@@ -67,28 +68,67 @@ ul {
 }
 
 .container {
-    width: 100%;
-    height: 80vh;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
 }
 
-// Header
-#main-header {
+// Intro
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+    color: darken($color: $light-color, $amount: 5%);
+    font-size: 3rem;
+}
+
+.slider {
+    background: $dark-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+
+    span {
+        transform: translateY(100%);
+        display: inline-block;
+    }
+}
+
+// Landing
+#landing {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
         url(../images/smoke-background.jpeg);
-    background-size: cover;
+background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-attachment: fixed;
     height: 100vh;
     color: $light-color;
 
+    .lead {
+        font-size: 1.5rem;
+    }
+
     // Navbar
     nav {
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -123,6 +163,15 @@ ul {
             }
         }
     }
+    .wrapper {
+        height: 80vh;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .burger {
         display: none;
         cursor: pointer;
@@ -130,14 +179,42 @@ ul {
         div {
             width: 30px;
             height: 2px;
-            background: $light-color;
+            background: red;
             margin: 5px;
             transition: transform 0.3s ease-in;
         }
     }
+}
 
-    .lead {
-        font-size: 1.5rem;
+// About Section
+#about {
+    height: 100vh;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    a {
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .left-side {
+        h2 {
+            border-bottom: 1px solid $dark-color;
+            margin: 1rem 0;
+        }
+        .fa-youtube {
+            color: #fa423b;
+        }
+    }
+
+    .right-side {
+        img {
+            max-width: 600px;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 // Tablet
 @media screen and (max-width: 1024px) {
-    #main-header {
+    #landing {
         nav {
             .nav-links {
                 width: 60%;
@@ -9,19 +9,49 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 863px) {
     main {
         position: relative;
         overflow-x: hidden;
     }
 
-    #main-header {
-        .burger {
-            display: block;
+    #landing {
+        h1 {
+            font-size: 3.3rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+        }
+
+        nav {
+            .nav-active {
+                transform: translateX(0);
+            }
+
+            .toggle #line-1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .toggle #line-2 {
+                opacity: 0;
+            }
+
+            .toggle #line-3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+            .lead {
+                font-size: 1rem;
+            }
         }
         nav {
+            .burger {
+                display: block;
+                position: fixed;
+                right: 0;
+            }
             .nav-links {
-                position: absolute;
+                position: fixed;
                 right: 0;
                 height: 100vh;
                 top: 0vh;
@@ -40,36 +70,9 @@
     }
 }
 
-#main-header {
-    h1 {
-        font-size: 3.3rem;
-    }
-
-    nav {
-        .nav-active {
-            transform: translateX(0);
-        }
-
-        .toggle #line-1 {
-            transform: rotate(-45deg) translate(-5px, 6px);
-        }
-
-        .toggle #line-2 {
-            opacity: 0;
-        }
-
-        .toggle #line-3 {
-            transform: rotate(45deg) translate(-5px, -6px);
-        }
-    }
-    .lead {
-        font-size: 1rem;
-    }
-}
-
 // Landscape
 @media screen and (max-height: 400px) {
-    #main-header {
+    #landing {
         height: 100%;
     }
 }
