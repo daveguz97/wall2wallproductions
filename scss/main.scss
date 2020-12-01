@@ -1,0 +1,179 @@
+@import './variables.scss';
+@import './config.scss';
+
+// Intro
+.intro {
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+    color: darken($color: $light-color, $amount: 5%);
+    font-size: 3rem;
+}
+
+.slider {
+    background: $dark-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transform: translateY(100%);
+}
+
+.hide {
+    background: black;
+    overflow: hidden;
+
+    span {
+        transform: translateY(100%);
+        display: inline-block;
+    }
+}
+
+// Landing
+#landing {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url(../images/smoke-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: $light-color;
+
+    .lead {
+        font-size: 1.5rem;
+    }
+
+    // Navbar
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem;
+
+        a {
+            color: $light-color;
+        }
+
+        #logo {
+            letter-spacing: 5px;
+            margin-left: 1rem;
+        }
+
+        .nav-links {
+            display: flex;
+            width: 60%;
+            align-items: center;
+            justify-content: space-evenly;
+            margin: 1re;
+            height: 8vh;
+            z-index: 1;
+
+            .nav-item {
+                margin: 0 0.3rem;
+                padding: 1rem;
+
+                .nav-link {
+                    font-weight: 600;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .wrapper {
+        height: 80vh;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .burger {
+        display: none;
+        cursor: pointer;
+        z-index: 1;
+        div {
+            width: 30px;
+            height: 2px;
+            background: red;
+            margin: 5px;
+            transition: transform 0.3s ease-in;
+        }
+    }
+}
+
+// About Section
+#about {
+    height: 100vh;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-side {
+        h2 {
+            border-bottom: 1px solid $dark-color;
+            margin: 1rem 0;
+        }
+        .fa-youtube {
+            color: #fa423b;
+        }
+    }
+
+    .right-side {
+        img {
+            max-width: 600px;
+            position: relative;
+            z-index: -3;
+        }
+    }
+}
+
+// Work
+#work {
+    color: $light-color;
+    height: 100%;
+    padding: 1rem 0;
+    background-color: $dark-color;
+    .wrapper {
+        text-align: center;
+
+        .yt-videos {
+            height: 100%;
+            margin-top: 5%;
+            iframe:first-child {
+                margin: 0 1rem;
+            }
+        }
+        h1 {
+            border: 1px solid $light-color;
+        }
+    }
+}
+
+@import './mobile.scss';
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
