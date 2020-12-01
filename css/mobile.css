@@ -35,7 +35,7 @@
   h2 {
     font-size: 2.5rem; }
   nav .nav-active {
-    transform: translateX(0); }
+    transform: translateX(0) !important; }
   nav .toggle #line-1 {
     transform: rotate(-45deg) translate(-5px, 6px); }
   nav .toggle #line-2 {
@@ -52,7 +52,9 @@
   #about .right-side img {
     max-width: 400px;
     position: relative;
-    z-index: -3; } }
+    z-index: -3; }
+  #work .wrapper .yt-videos iframe:first-child {
+    margin: 1rem 0; } }
 
 @media screen and (max-height: 400px) {
   #landing {
