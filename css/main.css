@@ -273,6 +273,8 @@ ul {
     margin: 0.5rem; }
     #contact .form-group input {
       padding: 0.3rem 1rem; }
+    #contact .form-group button {
+      padding: 0.4rem 1rem; }
 
 @media screen and (max-width: 1024px) {
   #landing nav .nav-links {
