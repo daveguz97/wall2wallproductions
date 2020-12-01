@@ -43,18 +43,16 @@
   nav .toggle #line-3 {
     transform: rotate(45deg) translate(-5px, -6px); }
   .lead {
-    font-size: 1rem; } }
-
-#about .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-#about .right-side img {
-  max-width: 400px;
-  position: relative;
-  z-index: -3; }
+    font-size: 1rem; }
+  #about .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #about .right-side img {
+    max-width: 400px;
+    position: relative;
+    z-index: -3; } }
 
 @media screen and (max-height: 400px) {
   #landing {
