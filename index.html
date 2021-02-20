@@ -1,172 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script
-            src="https://kit.fontawesome.com/f716609ce8.js"
-            crossorigin="anonymous"
-        ></script>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap"
-            rel="stylesheet"
-        />
-        <link rel="stylesheet" href="./css/main.css" />
-        <title>Wall2Wall Productions</title>
-    </head>
-    <body>
-        <main>
-            <!-- Header -->
-            <header id="landing">
-                <div class="cursor"></div>
-                <nav>
-                    <h5 id="logo">Wall2Wall Productions</h5>
-                    <ul class="nav-links">
-                        <li class="nav-item">
-                            <a href="#landing" class="nav-link">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">About me</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#work" class="nav-link">Featured Work</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contact</a>
-                        </li>
-                    </ul>
-                    <div class="burger">
-                        <div id="line-1"></div>
-                        <div id="line-2"></div>
-                        <div id="line-3"></div>
-                    </div>
-                </nav>
-                <div class="container">
-                    <div class="wrapper">
-                        <h2 id="title">Wall2Wall Productions</h2>
-                        <p class="lead">Videographer and Photographer</p>
-                    </div>
-                </div>
-            </header>
 
-            <!-- About Section -->
-            <section id="about">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="left-side">
-                            <h2>About Me</h2>
-                            <p>
-                                I'm a videographer and photographer that's
-                                resides in Charlotte, Nc.
-                            </p>
-                            <p>You can follow me on Youtube or Instagram!</p>
-                            <a
-                                href="https://www.instagram.com/wall2wall_productions/"
-                                target="_blank"
-                                ><i class="fab fa-instagram fa-3x"></i
-                            ></a>
-                            <a
-                                href="https://www.youtube.com/channel/UCVR61IfaupKs7ZqsvTjQIJQ"
-                                target="_blank"
-                            >
-                                <i class="fab fa-youtube fa-3x"></i
-                            ></a>
-                        </div>
-                        <div class="right-side">
-                            <img src="./images/logo.png" alt="logo-img" />
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- Work -->
-            <section id="work">
-                <div class="container">
-                    <div class="wrapper">
-                        <h2>Featured Work</h2>
-                        <div class="yt-videos">
-                            <iframe
-                                width="300"
-                                height="300"
-                                src="https://www.youtube.com/embed/uh2v-HtXSVA"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
-                            <iframe
-                                width="300"
-                                height="300"
-                                src="https://www.youtube.com/embed/0ZxmFjmZT9c"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
-            </section>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/f716609ce8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Wall2Wall Productions</title>
+</head>
 
-            <!-- Contact -->
-            <section id="contact">
-                <div class="container">
-                    <div class="wrapper">
-                        <h2>Contact</h2>
-                        <form name="contact" method="POST" data-netlify="true">
-                            <div class="form-group">
-                                <label for="name"><sup>*</sup>Name:</label
-                                ><input type="text" name="name" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="email"><sup>*</sup>Email:</label>
-                                <input type="email" name="email" required />
-                            </div>
-                            <div class="form-group">
-                                <label for="phone-number"
-                                    ><sup>*</sup>Phone Number:</label
-                                >
-                                <input
-                                    type="tel"
-                                    name="phone-number"
-                                    required
-                                />
-                            </div>
-                            <div class="form-group">
-                                <label for="other-details">Other Details:</label
-                                ><textarea
-                                    name="other-details"
-                                    id="other-details"
-                                    cols="40"
-                                    rows="10"
-                                ></textarea>
-                            </div>
-                            <div class="form-group">
-                                <div data-netlify-recaptcha="true"></div>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit">Submit</button>
-                            </div>
-                        </form>
-                    </div>
+<body>
+    <main>
+        <!-- Header -->
+        <header id="landing">
+            <div class="cursor"></div>
+            <nav>
+                <h5 id="logo">Wall2Wall Productions</h5>
+                <ul class="nav-links">
+                    <li class="nav-item">
+                        <a href="#landing" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#work" class="nav-link">Featured Work</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="burger">
+                    <div id="line-1"></div>
+                    <div id="line-2"></div>
+                    <div id="line-3"></div>
                 </div>
-            </section>
-        </main>
-        <div class="intro">
-            <div class="intro-text">
-                <h3 class="hide">
-                    <span class="text">Charlotte's</span>
-                </h3>
-                <h3 class="hide">
-                    <span class="text">Photographer And </span>
-                </h3>
-                <h3 class="hide"><span class="text">Videographer</span></h3>
+            </nav>
+            <div class="container">
+                <div class="wrapper">
+                    <h2 id="title">Wall2Wall Productions</h2>
+                    <p class="lead">Videographer and Photographer</p>
+                </div>
             </div>
-            <div class="slider"></div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="wrapper">
+                    <div class="left-side">
+                        <h2>About Me</h2>
+                        <p>
+                            I'm a videographer and photographer that's
+                            resides in Charlotte, Nc.
+                        </p>
+                        <p>You can follow me on Youtube or Instagram!</p>
+                        <a href="https://www.instagram.com/wall2wall_productions/" target="_blank"><i
+                                class="fab fa-instagram fa-3x"></i></a>
+                        <a href="https://www.youtube.com/channel/UCVR61IfaupKs7ZqsvTjQIJQ" target="_blank">
+                            <i class="fab fa-youtube fa-3x"></i></a>
+                    </div>
+                    <div class="right-side">
+                        <img src="./images/logo.png" alt="logo-img" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Work -->
+        <section id="work">
+            <div class="container">
+                <div class="wrapper">
+                    <h2>Featured Work</h2>
+                    <div class="yt-videos">
+                        <iframe width="300" height="300" src="https://www.youtube.com/embed/uh2v-HtXSVA" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                        <iframe width="300" height="300" src="https://www.youtube.com/embed/0ZxmFjmZT9c" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="container">
+                <div class="wrapper">
+                    <h2>Contact</h2>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class="form-group">
+                            <label for="name"><sup>*</sup>Name:</label><input type="text" name="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><sup>*</sup>Email:</label>
+                            <input type="email" name="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone-number"><sup>*</sup>Phone Number:</label>
+                            <input type="tel" name="phone-number" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="other-details">Other Details:</label><textarea name="other-details"
+                                id="other-details" cols="40" rows="10"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="intro">
+        <div class="intro-text">
+            <h3 class="hide">
+                <span class="text">Charlotte's</span>
+            </h3>
+            <h3 class="hide">
+                <span class="text">Photographer And </span>
+            </h3>
+            <h3 class="hide"><span class="text">Videographer</span></h3>
         </div>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
-            integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
-            crossorigin="anonymous"
-        ></script>
-        <script src="./js/main.js"></script>
-    </body>
+        <div class="slider"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+        integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+
 </html>
