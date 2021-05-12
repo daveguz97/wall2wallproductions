@@ -283,11 +283,11 @@ ul {
       margin-top: 5%;
       display: grid;
       gap: 1rem;
-      grid-template-areas: "video1 video2" "video1 video3"; }
+      grid-template-areas: "video1 video2" "video1 video3";
+      margin: 1rem 0; }
       #work .wrapper .yt-videos iframe {
-        width: 450px;
-        height: 300px;
-        margin: 1rem 0; }
+        width: 470px;
+        height: 300px; }
         #work .wrapper .yt-videos iframe:first-child {
           height: 400px;
           grid-area: video1;
@@ -300,7 +300,7 @@ ul {
       border: 1px solid #dddddd; }
 
 #contact {
-  height: 90vh; }
+  margin: 2rem 0; }
   #contact .wrapper {
     display: flex;
     flex-direction: column;
