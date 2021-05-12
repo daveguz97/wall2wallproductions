@@ -14,8 +14,12 @@ body {
 body {
   font-family: "Lato", sans-serif;
   line-height: 1.3;
-  background: #dddddd;
-  color: #232323;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/smoke-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: #dddddd;
   position: relative;
   overflow-x: hidden;
   cursor: none; }
@@ -61,12 +65,19 @@ ul {
   width: 80%;
   margin: 0 auto; }
 
+#about .container,
+#work .container,
+#contact .container {
+  padding-top: 8rem; }
+
 @media screen and (max-width: 1024px) {
   main {
     position: relative;
     overflow-x: hidden; }
   #landing .navbar .nav-links {
     width: 60%; }
+  #about .left-side, #about .right-side {
+    width: 100%; }
   #work .wrapper .yt-videos {
     display: block; }
     #work .wrapper .yt-videos iframe {
@@ -167,17 +178,15 @@ ul {
 
 .intro-text {
   color: #d0d0d0;
-  font-size: 3rem; }
-
-.slider {
-  background: #232323;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  transform: translateY(100%); }
+  font-size: 30rem; }
+  .intro-text .centered-text {
+    letter-spacing: 2rem;
+    font-size: 4rem; }
+  .intro-text .small-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 auto; }
 
 .hide {
   background: black;
@@ -187,11 +196,6 @@ ul {
     display: inline-block; }
 
 #landing {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/smoke-background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
   height: 100vh;
   color: #dddddd; }
   #landing .lead {
@@ -245,61 +249,66 @@ ul {
       margin: 5px;
       transition: transform 0.3s ease-in; }
 
-#about .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-#about .left-side,
-#about .right-side {
-  width: 50%;
-  padding: 1rem; }
-
-#about .left-side {
-  width: 50%; }
-  #about .left-side h2 {
-    border-bottom: 1px solid #232323;
-    margin: 1rem 0; }
-  #about .left-side .fa-youtube {
-    color: #fa423b; }
-
-#about .right-side {
-  width: 50%; }
-  #about .right-side #logo-img {
-    max-width: 400px;
-    position: relative;
-    z-index: -3;
-    border-radius: 5px; }
-
-#work {
-  color: #dddddd;
-  height: 100%;
-  padding: 1rem 0;
-  background-color: #232323; }
-  #work .wrapper {
-    text-align: center; }
-    #work .wrapper .yt-videos {
-      height: 100%;
-      margin-top: 5%;
-      display: grid;
-      gap: 1rem;
-      grid-template-areas: "video1 video2" "video1 video3";
+#about {
+  height: 90vh; }
+  #about .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  #about .left-side,
+  #about .right-side {
+    width: 50%;
+    padding: 1rem; }
+  #about .left-side {
+    width: 40%;
+    height: 100%; }
+    #about .left-side h2 {
+      border-bottom: 1px solid #232323;
       margin: 1rem 0; }
-      #work .wrapper .yt-videos iframe {
-        width: 470px;
-        height: 300px; }
-        #work .wrapper .yt-videos iframe:first-child {
-          height: 400px;
-          grid-area: video1;
-          align-self: center; }
-        #work .wrapper .yt-videos iframe:nth-child(2) {
-          grid-area: video2; }
-        #work .wrapper .yt-videos iframe:nth-child(3) {
-          grid-area: video3; }
-    #work .wrapper h1 {
-      border: 1px solid #dddddd; }
+    #about .left-side .fab {
+      margin: 1rem 0.5rem; }
+    #about .left-side .fa-instagram {
+      color: #dd2a7b; }
+    #about .left-side .fa-youtube {
+      color: #fa423b; }
+  #about .right-side {
+    width: 50%;
+    height: 100%;
+    margin: auto; }
+    #about .right-side #logo-img {
+      max-width: 400px;
+      margin: auto;
+      z-index: -3;
+      border-radius: 5px; }
+
+#work .wrapper {
+  text-align: center; }
+  #work .wrapper .yt-videos {
+    height: 100%;
+    margin-top: 5%;
+    display: grid;
+    gap: 1rem;
+    grid-template-areas: "video1 video2" "video1 video3";
+    margin: 1rem 0; }
+    #work .wrapper .yt-videos iframe {
+      width: 470px;
+      height: 300px; }
+      #work .wrapper .yt-videos iframe:first-child {
+        height: 400px;
+        grid-area: video1;
+        align-self: center; }
+      #work .wrapper .yt-videos iframe:nth-child(2) {
+        grid-area: video2; }
+      #work .wrapper .yt-videos iframe:nth-child(3) {
+        grid-area: video3; }
+  #work .wrapper h1 {
+    border: 1px solid #dddddd; }
 
 #contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2rem 0; }
   #contact .wrapper {
     display: flex;
@@ -310,12 +319,19 @@ ul {
   #contact .form-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 0.5rem; }
+    justify-content: space-evenly;
+    margin: 0.5rem;
+    width: 70vw;
+    margin: 0 auto; }
+    #contact .form-group label {
+      margin: 0.3rem 0; }
     #contact .form-group input {
-      padding: 0.3rem 1rem; }
+      padding: 0.3rem 1rem;
+      margin: 1rem 0; }
     #contact .form-group button {
       padding: 0.8rem 1rem;
+      width: 80%;
+      margin: 1rem auto;
       border: none;
       cursor: pointer;
       border-radius: 10px;
@@ -331,6 +347,8 @@ ul {
     overflow-x: hidden; }
   #landing .navbar .nav-links {
     width: 60%; }
+  #about .left-side, #about .right-side {
+    width: 100%; }
   #work .wrapper .yt-videos {
     display: block; }
     #work .wrapper .yt-videos iframe {

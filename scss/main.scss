@@ -36,18 +36,17 @@
 
 .intro-text {
   color: darken($color: $light-color, $amount: 5%);
-  font-size: 3rem;
-}
-
-.slider {
-  background: $dark-color;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  transform: translateY(100%);
+  font-size: 30rem;
+  .centered-text {
+    letter-spacing: 2rem;
+    font-size: 4rem;
+  }
+  .small-text {
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 0 auto;
+  }
 }
 
 .hide {
@@ -62,12 +61,6 @@
 
 // Landing
 #landing {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url(../images/smoke-background.jpeg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
   height: 100vh;
   color: $light-color;
 
@@ -147,6 +140,7 @@
 
 // About Section
 #about {
+  height: 90vh;
   .wrapper {
     display: flex;
     justify-content: space-between;
@@ -160,10 +154,17 @@
   }
 
   .left-side {
-    width: 50%;
+    width: 40%;
+    height: 100%;
     h2 {
       border-bottom: 1px solid $dark-color;
       margin: 1rem 0;
+    }
+    .fab {
+      margin: 1rem 0.5rem;
+    }
+    .fa-instagram {
+      color: #dd2a7b;
     }
     .fa-youtube {
       color: #fa423b;
@@ -172,9 +173,11 @@
 
   .right-side {
     width: 50%;
+    height: 100%;
+    margin: auto;
     #logo-img {
       max-width: 400px;
-      position: relative;
+      margin: auto;
       z-index: -3;
       border-radius: 5px;
     }
@@ -183,10 +186,6 @@
 
 // Work
 #work {
-  color: $light-color;
-  height: 100%;
-  padding: 1rem 0;
-  background-color: $dark-color;
   .wrapper {
     text-align: center;
 
@@ -222,6 +221,10 @@
 }
 
 #contact {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2rem 0;
   .wrapper {
     display: flex;
@@ -234,15 +237,23 @@
   .form-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     margin: 0.5rem;
+    width: 70vw;
+    margin: 0 auto;
 
+    label {
+      margin: 0.3rem 0;
+    }
     input {
       padding: 0.3rem 1rem;
+      margin: 1rem 0;
     }
 
     button {
       padding: 0.8rem 1rem;
+      width: 80%;
+      margin: 1rem auto;
       border: none;
       cursor: pointer;
       border-radius: 10px;
