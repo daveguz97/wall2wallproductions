@@ -12,7 +12,7 @@ body {
   height: 100%; }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.3;
   background: #dddddd;
   color: #232323;
@@ -45,7 +45,7 @@ h4,
 h5,
 h6,
 strong {
-  font-family: 'Montserrat', sans-serif; }
+  font-family: "Montserrat", sans-serif; }
 
 a {
   text-decoration: none;
@@ -61,46 +61,25 @@ ul {
   width: 80%;
   margin: 0 auto; }
 
-.cursor {
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid red;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  transition: all 0.3s ease;
-  transition-property: background, transform;
-  transform-origin: 100% 100%;
-  backdrop-filter: grayscale(50%); }
-
-.link-grow {
-  transform: scale(2);
-  background: white; }
-
-.hovered-link {
-  color: black !important; }
-
 @media screen and (max-width: 1024px) {
-  #landing nav .nav-links {
-    width: 60%; } }
-
-@media screen and (max-width: 870px) {
-  body {
-    cursor: auto; }
   main {
     position: relative;
     overflow-x: hidden; }
+  #landing .navbar .nav-links {
+    width: 60%; } }
+
+@media screen and (max-width: 900px) {
+  body {
+    cursor: auto; }
   .intro .intro-text {
     font-size: 1.4rem; }
   .cursor {
     display: none; }
-  #landing nav .burger {
+  #landing .navbar .burger {
     display: block;
     position: fixed;
     right: 0; }
-  #landing nav .nav-links {
+  #landing .navbar .nav-links {
     position: fixed;
     right: 0;
     height: 100vh;
@@ -112,19 +91,19 @@ ul {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease-in; }
-  #landing nav .nav-links li {
+  #landing .navbar .nav-links li {
     opacity: 0; }
   h1 {
     font-size: 3.3rem; }
   h2 {
     font-size: 2.5rem; }
-  nav .nav-active {
+  .navbar .nav-active {
     transform: translateX(0) !important; }
-  nav .toggle #line-1 {
+  .navbar .toggle #line-1 {
     transform: rotate(-45deg) translate(-5px, 6px); }
-  nav .toggle #line-2 {
+  .navbar .toggle #line-2 {
     opacity: 0; }
-  nav .toggle #line-3 {
+  .navbar .toggle #line-3 {
     transform: rotate(45deg) translate(-5px, -6px); }
   .lead {
     font-size: 1rem; }
@@ -143,6 +122,23 @@ ul {
 @media screen and (max-height: 400px) {
   #landing {
     height: 100%; } }
+
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid red;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: grayscale(50%); }
+
+.link-grow {
+  transform: scale(2); }
 
 .intro {
   background: black;
@@ -187,30 +183,36 @@ ul {
   color: #dddddd; }
   #landing .lead {
     font-size: 1.5rem; }
-  #landing nav {
+  #landing .navbar {
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 1rem; }
-    #landing nav a {
+    #landing .navbar a {
       color: #dddddd; }
-    #landing nav #logo {
+    #landing .navbar #logo {
       letter-spacing: 5px;
       margin-left: 1rem; }
-    #landing nav .nav-links {
+    #landing .navbar .nav-links {
       display: flex;
       width: 60%;
       align-items: center;
       justify-content: space-evenly;
-      margin: 1re;
       height: 8vh;
       z-index: 1; }
-      #landing nav .nav-links .nav-item {
+      #landing .navbar .nav-links .nav-links {
+        z-index: 1; }
+      #landing .navbar .nav-links .nav-item {
         margin: 0 0.3rem;
         padding: 1rem; }
-        #landing nav .nav-links .nav-item .nav-link {
-          font-weight: 600;
-          z-index: 1; }
+        #landing .navbar .nav-links .nav-item .nav-link {
+          font-weight: 600; }
+          #landing .navbar .nav-links .nav-item .nav-link.hovered-link {
+            color: #cc0000; }
+  #landing .fixed-nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9); }
   #landing .wrapper {
     height: 80vh;
     margin: 0 auto;
@@ -288,24 +290,24 @@ ul {
         background-color: #006ad6; }
 
 @media screen and (max-width: 1024px) {
-  #landing nav .nav-links {
-    width: 60%; } }
-
-@media screen and (max-width: 870px) {
-  body {
-    cursor: auto; }
   main {
     position: relative;
     overflow-x: hidden; }
+  #landing .navbar .nav-links {
+    width: 60%; } }
+
+@media screen and (max-width: 900px) {
+  body {
+    cursor: auto; }
   .intro .intro-text {
     font-size: 1.4rem; }
   .cursor {
     display: none; }
-  #landing nav .burger {
+  #landing .navbar .burger {
     display: block;
     position: fixed;
     right: 0; }
-  #landing nav .nav-links {
+  #landing .navbar .nav-links {
     position: fixed;
     right: 0;
     height: 100vh;
@@ -317,19 +319,19 @@ ul {
     width: 100%;
     transform: translateX(100%);
     transition: transform 0.3s ease-in; }
-  #landing nav .nav-links li {
+  #landing .navbar .nav-links li {
     opacity: 0; }
   h1 {
     font-size: 3.3rem; }
   h2 {
     font-size: 2.5rem; }
-  nav .nav-active {
+  .navbar .nav-active {
     transform: translateX(0) !important; }
-  nav .toggle #line-1 {
+  .navbar .toggle #line-1 {
     transform: rotate(-45deg) translate(-5px, 6px); }
-  nav .toggle #line-2 {
+  .navbar .toggle #line-2 {
     opacity: 0; }
-  nav .toggle #line-3 {
+  .navbar .toggle #line-3 {
     transform: rotate(45deg) translate(-5px, -6px); }
   .lead {
     font-size: 1rem; }
