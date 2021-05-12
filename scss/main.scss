@@ -147,14 +147,20 @@
 
 // About Section
 #about {
-  height: 100vh;
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
+  .left-side,
+  .right-side {
+    width: 50%;
+    padding: 1rem;
+  }
+
   .left-side {
+    width: 50%;
     h2 {
       border-bottom: 1px solid $dark-color;
       margin: 1rem 0;
@@ -165,10 +171,12 @@
   }
 
   .right-side {
-    img {
-      max-width: 600px;
+    width: 50%;
+    #logo-img {
+      max-width: 400px;
       position: relative;
       z-index: -3;
+      border-radius: 5px;
     }
   }
 }

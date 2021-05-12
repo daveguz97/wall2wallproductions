@@ -88,9 +88,15 @@
       justify-content: center;
       align-items: center;
     }
+
+    .left-side,
     .right-side {
-      img {
-        max-width: 400px;
+      width: 80%;
+    }
+
+    .right-side {
+      #logo-img {
+        max-width: 200px;
         position: relative;
         z-index: -3;
       }
@@ -99,6 +105,11 @@
 
   #work {
     .wrapper {
+      .yt-videos {
+        iframe {
+          width: 100%;
+        }
+      }
       .yt-videos {
         iframe:first-child {
           margin: 1rem 0;
