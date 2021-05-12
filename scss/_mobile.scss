@@ -13,7 +13,8 @@
   }
 
   #about {
-    .left-side, .right-side {
+    .left-side,
+    .right-side {
       width: 100%;
     }
   }
@@ -41,8 +42,16 @@
     cursor: auto;
   }
 
-  .intro .intro-text {
-    font-size: 1.4rem;
+  .intro {
+    .intro-text {
+      .centered-text {
+        letter-spacing: 1rem;
+        font-size: 1.5rem;
+      }
+      .small-text {
+        font-size: .8rem;
+      }
+    }
   }
 
   .cursor {
@@ -102,6 +111,13 @@
   }
   .lead {
     font-size: 1rem;
+  }
+  #about,
+  #work,
+  #contact {
+    .container {
+      padding-top: 2rem;
+    }
   }
   #about {
     .wrapper {

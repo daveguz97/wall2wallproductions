@@ -76,7 +76,8 @@ ul {
     overflow-x: hidden; }
   #landing .navbar .nav-links {
     width: 60%; }
-  #about .left-side, #about .right-side {
+  #about .left-side,
+  #about .right-side {
     width: 100%; }
   #work .wrapper .yt-videos {
     display: block; }
@@ -88,8 +89,11 @@ ul {
 @media screen and (max-width: 900px) {
   body {
     cursor: auto; }
-  .intro .intro-text {
-    font-size: 1.4rem; }
+  .intro .intro-text .centered-text {
+    letter-spacing: 1rem;
+    font-size: 1.5rem; }
+  .intro .intro-text .small-text {
+    font-size: .8rem; }
   .cursor {
     display: none; }
   #landing .navbar .burger {
@@ -124,6 +128,10 @@ ul {
     transform: rotate(45deg) translate(-5px, -6px); }
   .lead {
     font-size: 1rem; }
+  #about .container,
+  #work .container,
+  #contact .container {
+    padding-top: 2rem; }
   #about .wrapper {
     display: flex;
     flex-direction: column;
@@ -153,7 +161,7 @@ ul {
   border: 2px solid red;
   border-radius: 50%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   transform: translate(-50%, -50%);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -177,8 +185,7 @@ ul {
   align-items: center; }
 
 .intro-text {
-  color: #d0d0d0;
-  font-size: 30rem; }
+  color: #d0d0d0; }
   .intro-text .centered-text {
     letter-spacing: 2rem;
     font-size: 4rem; }
@@ -204,7 +211,8 @@ ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 1rem; }
+    padding: 1rem;
+    z-index: 1; }
     #landing .navbar a {
       color: #dddddd; }
     #landing .navbar #logo {
@@ -347,7 +355,8 @@ ul {
     overflow-x: hidden; }
   #landing .navbar .nav-links {
     width: 60%; }
-  #about .left-side, #about .right-side {
+  #about .left-side,
+  #about .right-side {
     width: 100%; }
   #work .wrapper .yt-videos {
     display: block; }
@@ -359,8 +368,11 @@ ul {
 @media screen and (max-width: 900px) {
   body {
     cursor: auto; }
-  .intro .intro-text {
-    font-size: 1.4rem; }
+  .intro .intro-text .centered-text {
+    letter-spacing: 1rem;
+    font-size: 1.5rem; }
+  .intro .intro-text .small-text {
+    font-size: .8rem; }
   .cursor {
     display: none; }
   #landing .navbar .burger {
@@ -395,6 +407,10 @@ ul {
     transform: rotate(45deg) translate(-5px, -6px); }
   .lead {
     font-size: 1rem; }
+  #about .container,
+  #work .container,
+  #contact .container {
+    padding-top: 2rem; }
   #about .wrapper {
     display: flex;
     flex-direction: column;
