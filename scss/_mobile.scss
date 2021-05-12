@@ -89,11 +89,6 @@
       align-items: center;
     }
 
-    .left-side,
-    .right-side {
-      width: 80%;
-    }
-
     .right-side {
       #logo-img {
         max-width: 200px;
@@ -115,6 +110,16 @@
           margin: 1rem 0;
         }
       }
+    }
+  }
+}
+
+// Smaller Screens
+@media screen and (max-width: 768px) {
+  #about {
+    .left-side,
+    .right-side {
+      width: 90%;
     }
   }
 }
