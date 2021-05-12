@@ -11,6 +11,22 @@
       }
     }
   }
+
+  #work {
+    .wrapper {
+      .yt-videos {
+        display: block;
+        iframe {
+          width: 80%;
+        }
+      }
+      .yt-videos {
+        iframe:first-child {
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
 }
 
 // Smaller Phones

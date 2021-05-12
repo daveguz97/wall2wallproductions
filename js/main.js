@@ -63,7 +63,6 @@ const fixedNav = () => {
   const nav = document.querySelector(".navbar");
   // When the user scrolls a certain distance and the width of the screen is more than
   document.addEventListener("scroll", () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 62 && window.innerWidth > 900) {
       nav.classList.add("fixed-nav");
     } else {

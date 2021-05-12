@@ -193,8 +193,26 @@
     .yt-videos {
       height: 100%;
       margin-top: 5%;
-      iframe:first-child {
-        margin: 0 1rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-areas:
+        "video1 video2"
+        "video1 video3";
+      iframe {
+        width: 450px;
+        height: 300px;
+        margin: 1rem 0;
+        &:first-child {
+          height: 400px;
+          grid-area: video1;
+          align-self: center;
+        }
+        &:nth-child(2) {
+          grid-area: video2;
+        }
+        &:nth-child(3) {
+          grid-area: video3;
+        }
       }
     }
     h1 {
