@@ -74,7 +74,7 @@ const fixedNav = () => {
 // The whole app functionality
 const app = () => {
   navSlide();
-  introAnimation();
+  // introAnimation();
   cursorStyle();
   fixedNav();
 };
