@@ -385,12 +385,14 @@ ul {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      padding: auto 1rem; }
     #pricing .cards .card-title {
       font-weight: 800;
       text-shadow: 2px 2px 2px #969696; }
     #pricing .cards .card-description {
-      font-weight: 600; }
+      font-weight: 600;
+      text-transform: capitalize; }
     #pricing .cards .card-title,
     #pricing .cards .card-description {
       margin: 0.5rem 0; }
