@@ -79,7 +79,7 @@ const stripePayments = () => {
   const studio = document.querySelector(".studio");
 
   basic.addEventListener("click", () => {
-    fetch("/create-checkout-session", {
+    fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const stripePayments = () => {
   });
 
   pro.addEventListener("click", () => {
-    fetch("/create-checkout-session", {
+    fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -123,7 +123,7 @@ const stripePayments = () => {
   });
 
   studio.addEventListener("click", () => {
-    fetch("/create-checkout-session", {
+    fetch("http://localhost:3000/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,7 +147,7 @@ const stripePayments = () => {
 
 // The whole app functionality
 const app = () => {
-  console.log('ok')
+  console.log("ok");
   stripePayments();
   navSlide();
   introAnimation();
