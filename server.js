@@ -5,7 +5,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(
   cors({
-    origin: "wall2wallproductions.netlify.app",
+    origin: "https://wall2wallproductions.netlify.app",
   })
 );
 app.use(express.static("public"));
