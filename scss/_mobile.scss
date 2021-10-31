@@ -49,7 +49,7 @@
         font-size: 1.5rem;
       }
       .small-text {
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
   }
@@ -158,6 +158,19 @@
     .left-side,
     .right-side {
       width: 90%;
+    }
+  }
+  #pricing {
+    height: 100%;
+    margin: 2rem 0;
+
+    .cards {
+      flex-direction: column;
+      align-items: center;
+
+      .card {
+        margin: 1rem 0;
+      }
     }
   }
 }
