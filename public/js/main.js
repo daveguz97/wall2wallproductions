@@ -147,7 +147,7 @@ const stripePayments = () => {
 
 // The whole app functionality
 const app = () => {
-  console.log('test')
+  console.log('ok')
   stripePayments();
   navSlide();
   introAnimation();
