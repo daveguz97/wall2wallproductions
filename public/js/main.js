@@ -71,8 +71,83 @@ const fixedNav = () => {
   });
 };
 
+const stripePayments = () => {
+  const basic = document.querySelector(".basic");
+
+  const pro = document.querySelector(".pro")
+
+  const studio = document.querySelector(".studio")
+  
+  basic.addEventListener("click", () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: [{ id: 1, quantity: 1 }],
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
+  });
+
+  pro.addEventListener("click", () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: [{ id: 2, quantity: 1 }],
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
+  });
+
+  studio.addEventListener("click", () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        items: [{ id: 3, quantity: 1 }],
+      }),
+    })
+      .then((res) => {
+        if (res.ok) return res.json();
+        return res.json().then((json) => Promise.reject(json));
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
+  });
+};
+
 // The whole app functionality
 const app = () => {
+  stripePayments();
   navSlide();
   introAnimation();
   cursorStyle();
