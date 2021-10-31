@@ -79,7 +79,7 @@ const stripePayments = () => {
   const studio = document.querySelector(".studio");
 
   basic.addEventListener("click", () => {
-    fetch("https://wall2wallproductions.herokuapp.com/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,7 +101,7 @@ const stripePayments = () => {
   });
 
   pro.addEventListener("click", () => {
-    fetch("https://wall2wallproductions.herokuapp.com/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -123,7 +123,7 @@ const stripePayments = () => {
   });
 
   studio.addEventListener("click", () => {
-    fetch("https://wall2wallproductions.herokuapp.com/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

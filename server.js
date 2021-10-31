@@ -4,7 +4,7 @@ const app = express();
 let port = process.env.PORT || 3000;
 app.set("view engine", "ejs");
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 const cors = require("cors");
 app.use(express.json());
 app.use(
@@ -22,10 +22,9 @@ const storeItems = new Map([
   [3, { priceInCents: 100000, name: "Studio" }],
 ]);
 
-app.get('/', function(req, res) {
-
+app.get("/", function (req, res) {
   // ejs render automatically looks in the views folder
-  res.render('index');
+  res.render("index");
 });
 
 app.post("/create-checkout-session", async (req, res) => {
@@ -46,8 +45,8 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: `${process.env.PUBLIC_URL}/success.html`,
-      cancel_url: `${process.env.PUBLIC_URL}`,
+      success_url: `https://wall2wallproductions.herokuapp.com/success.html`,
+      cancel_url: `https://wall2wallproductions.herokuapp.com`,
     });
     res.json({ url: session.url });
   } catch (e) {
@@ -55,6 +54,6 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-app.listen(port, function() {
-  console.log('Our app is running on http://localhost:' + port);
+app.listen(port, function () {
+  console.log("Our app is running on http://localhost:" + port);
 });
