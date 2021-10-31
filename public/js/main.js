@@ -74,12 +74,12 @@ const fixedNav = () => {
 const stripePayments = () => {
   const basic = document.querySelector(".basic");
 
-  const pro = document.querySelector(".pro")
+  const pro = document.querySelector(".pro");
 
-  const studio = document.querySelector(".studio")
-  
+  const studio = document.querySelector(".studio");
+
   basic.addEventListener("click", () => {
-    fetch("/create-checkout-session", {
+    fetch("https://wall2wallproductions.netlify.app/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -147,6 +147,7 @@ const stripePayments = () => {
 
 // The whole app functionality
 const app = () => {
+  console.log('test')
   stripePayments();
   navSlide();
   introAnimation();

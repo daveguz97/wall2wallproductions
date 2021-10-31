@@ -20,7 +20,7 @@ const storeItems = new Map([
 ]);
 
 app.post(
-  "wall2wallproductions.netlify.app/create-checkout-session",
+  "create-checkout-session",
   async (req, res) => {
     try {
       const session = await stripe.checkout.sessions.create({
