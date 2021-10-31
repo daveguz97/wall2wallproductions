@@ -9,7 +9,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://wall2wallproductions.netlify.app",
+    origin: "https://wall2wallproductions.herokuapp.com",
   })
 );
 app.use(express.static("public"));
