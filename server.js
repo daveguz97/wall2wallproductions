@@ -1,6 +1,10 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+let port = process.env.PORT || 3000;
+app.set("view engine", "ejs");
+
+app.use(express.static(__dirname + '/public'));
 const cors = require("cors");
 app.use(express.json());
 app.use(
@@ -17,6 +21,12 @@ const storeItems = new Map([
   [2, { priceInCents: 50000, name: "Pro" }],
   [3, { priceInCents: 100000, name: "Studio" }],
 ]);
+
+app.get('/', function(req, res) {
+
+  // ejs render automatically looks in the views folder
+  res.render('index');
+});
 
 app.post("/create-checkout-session", async (req, res) => {
   try {
@@ -45,4 +55,6 @@ app.post("/create-checkout-session", async (req, res) => {
   }
 });
 
-app.listen(3000);
+app.listen(port, function() {
+  console.log('Our app is running on http://localhost:' + port);
+});
