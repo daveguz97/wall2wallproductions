@@ -79,7 +79,7 @@ const stripePayments = () => {
   const studio = document.querySelector(".studio");
 
   basic.addEventListener("click", () => {
-    fetch("http://localhost:3000/create-checkout-session", {
+    fetch("/create-checkout-session", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
