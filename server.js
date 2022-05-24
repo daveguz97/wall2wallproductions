@@ -27,6 +27,11 @@ app.get("/", function (req, res) {
   res.render("index");
 });
 
+app.get("/success", function (req, res) {
+  // ejs render automatically looks in the views folder
+  res.render("success");
+});
+
 app.post("/create-checkout-session", async (req, res) => {
   try {
     const session = await stripe.checkout.sessions.create({
@@ -45,7 +50,7 @@ app.post("/create-checkout-session", async (req, res) => {
           quantity: item.quantity,
         };
       }),
-      success_url: `https://wall2wallproductions.herokuapp.com/success.html`,
+      success_url: `https://wall2wallproductions.herokuapp.com/success`,
       cancel_url: `https://wall2wallproductions.herokuapp.com`,
     });
     res.json({ url: session.url });

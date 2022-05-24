@@ -397,6 +397,23 @@ ul {
     #pricing .cards .card-description {
       margin: 0.5rem 0; }
 
+.success-container {
+  height: 100%;
+  width: 100%; }
+  .success-container .container {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .success-container .container a {
+      color: #dddddd;
+      margin-top: 0.5rem; }
+      .success-container .container a:hover {
+        color: #c4c4c4; }
+
 @media screen and (max-width: 1024px) {
   main {
     position: relative;
